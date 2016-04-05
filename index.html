@@ -5,9 +5,12 @@
 	<title>The world map</title>
 	<style type="text/css">
 		path {
-			stroke: white;
-			stroke-width: 0.25px;
-			fill: grey;
+			stroke: #405568;
+			stroke-width: 1px;
+			fill: #536677;
+		}
+		body{
+			background-color: #405568;
 		}
 	</style>
 </head>
@@ -42,6 +45,7 @@
 					.append('path')
 					.attr('d', path);
 			d3.csv('data/cities.csv', function(error, data){
+				console.log(data);
 				g.selectAll('circle')
 					.data(data)
 					.enter()
